@@ -46,7 +46,7 @@ class Aplicacion:
         ttk.Button(frame, text = 'Guardar App', command = self.add_app).grid(row = 6, columnspan = 2, sticky = W + E)
 
         # Output Messages 
-        self.message = Label(text = '', fg = 'red')
+        self.message = Label(text = '', fg = 'blue')
         self.message.grid(row = 6, column = 0, columnspan = 5, sticky = W + E)
 
         # Table
@@ -83,7 +83,7 @@ class Aplicacion:
             conn.commit()
         return result
 
-    # Get Products from Database
+    # Get Apps from Database
     def get_apps(self):
         # cleaning Table 
         records = self.tree.get_children()
